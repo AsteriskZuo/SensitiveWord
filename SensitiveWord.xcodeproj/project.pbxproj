@@ -8,12 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		D9DAA79C239BA94B0005445E /* SensitiveWord.h in Headers */ = {isa = PBXBuildFile; fileRef = D9DAA79A239BA94B0005445E /* SensitiveWord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9DAA7BA239BAB010005445E /* opencc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DAA7AE239BAA5A0005445E /* opencc.framework */; };
+		D9DAA7BC239BAB300005445E /* opencc.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D9DAA7AE239BAA5A0005445E /* opencc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9DAA7BF239BAD7C0005445E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DAA7BE239BAD7C0005445E /* Foundation.framework */; };
+		D9DAA7CD239BAECF0005445E /* SensitiveWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9DAA7A2239BA97F0005445E /* SensitiveWord.cpp */; };
+		D9DAA7CE239BAECF0005445E /* SensitiveWord.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D9DAA7A3239BA97F0005445E /* SensitiveWord.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9DAA7AD239BAA5A0005445E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9DAA7A7239BAA5A0005445E /* opencc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9DAA54B239B970E0005445E;
+			remoteInfo = opencc;
+		};
+		D9DAA7AF239BAA5A0005445E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9DAA7A7239BAA5A0005445E /* opencc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9DAA71E239BA4850005445E;
+			remoteInfo = opencc_data;
+		};
+		D9DAA7B1239BAA5A0005445E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9DAA7A7239BAA5A0005445E /* opencc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9DAA76F239BA8610005445E;
+			remoteInfo = opencc_data_ocd;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D9DAA7BB239BAB280005445E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				D9DAA7BC239BAB300005445E /* opencc.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D9DAA797239BA94B0005445E /* SensitiveWord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SensitiveWord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9DAA79A239BA94B0005445E /* SensitiveWord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensitiveWord.h; sourceTree = "<group>"; };
 		D9DAA79B239BA94B0005445E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9DAA7A2239BA97F0005445E /* SensitiveWord.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SensitiveWord.cpp; sourceTree = "<group>"; };
+		D9DAA7A3239BA97F0005445E /* SensitiveWord.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SensitiveWord.hpp; sourceTree = "<group>"; };
+		D9DAA7A7239BAA5A0005445E /* opencc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = opencc.xcodeproj; path = ../../opencc/opencc.xcodeproj; sourceTree = "<group>"; };
+		D9DAA7BE239BAD7C0005445E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9DAA7BF239BAD7C0005445E /* Foundation.framework in Frameworks */,
+				D9DAA7BA239BAB010005445E /* opencc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,8 +78,10 @@
 		D9DAA78D239BA94B0005445E = {
 			isa = PBXGroup;
 			children = (
+				D9DAA7A6239BAA190005445E /* OpenCC */,
 				D9DAA799239BA94B0005445E /* SensitiveWord */,
 				D9DAA798239BA94B0005445E /* Products */,
+				D9DAA7B6239BAB010005445E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +96,38 @@
 		D9DAA799239BA94B0005445E /* SensitiveWord */ = {
 			isa = PBXGroup;
 			children = (
+				D9DAA7A2239BA97F0005445E /* SensitiveWord.cpp */,
+				D9DAA7A3239BA97F0005445E /* SensitiveWord.hpp */,
 				D9DAA79A239BA94B0005445E /* SensitiveWord.h */,
 				D9DAA79B239BA94B0005445E /* Info.plist */,
 			);
 			path = SensitiveWord;
+			sourceTree = "<group>";
+		};
+		D9DAA7A6239BAA190005445E /* OpenCC */ = {
+			isa = PBXGroup;
+			children = (
+				D9DAA7A7239BAA5A0005445E /* opencc.xcodeproj */,
+			);
+			path = OpenCC;
+			sourceTree = "<group>";
+		};
+		D9DAA7A8239BAA5A0005445E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9DAA7AE239BAA5A0005445E /* opencc.framework */,
+				D9DAA7B0239BAA5A0005445E /* opencc_data.bundle */,
+				D9DAA7B2239BAA5A0005445E /* opencc_data_ocd.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9DAA7B6239BAB010005445E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9DAA7BE239BAD7C0005445E /* Foundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9DAA79C239BA94B0005445E /* SensitiveWord.h in Headers */,
+				D9DAA7CE239BAECF0005445E /* SensitiveWord.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +153,7 @@
 				D9DAA793239BA94B0005445E /* Sources */,
 				D9DAA794239BA94B0005445E /* Frameworks */,
 				D9DAA795239BA94B0005445E /* Resources */,
+				D9DAA7BB239BAB280005445E /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -109,12 +189,42 @@
 			mainGroup = D9DAA78D239BA94B0005445E;
 			productRefGroup = D9DAA798239BA94B0005445E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D9DAA7A8239BAA5A0005445E /* Products */;
+					ProjectRef = D9DAA7A7239BAA5A0005445E /* opencc.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D9DAA796239BA94B0005445E /* SensitiveWord */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D9DAA7AE239BAA5A0005445E /* opencc.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = opencc.framework;
+			remoteRef = D9DAA7AD239BAA5A0005445E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9DAA7B0239BAA5A0005445E /* opencc_data.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = opencc_data.bundle;
+			remoteRef = D9DAA7AF239BAA5A0005445E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D9DAA7B2239BAA5A0005445E /* opencc_data_ocd.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = opencc_data_ocd.bundle;
+			remoteRef = D9DAA7B1239BAA5A0005445E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D9DAA795239BA94B0005445E /* Resources */ = {
@@ -131,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9DAA7CD239BAECF0005445E /* SensitiveWord.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
