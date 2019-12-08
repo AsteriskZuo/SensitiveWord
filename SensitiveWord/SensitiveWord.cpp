@@ -316,12 +316,15 @@ void test_minganci_res(const std::string& t2sjson)
     std::string&& resdir = BundleToolsCpp::getResourceDirectory();
     sensitive_word* p_tree = new sensitive_word(resdir);
     p_tree->set_config(zy::sensitive_word::config{false, false});
-    std::vector<std::string> list = {u8" 中國人", u8"中國 ", u8"中日"};
+    std::vector<std::string> list = {u8" 中國人", u8"中國 ", u8"中日", u8"龍"};
     p_tree->init(list);
     bool ret = p_tree->match(u8"中央电视台播放，今天中国人民站起来了~");
+    std::cout << ret << std::endl;
+    ret = p_tree->match(u8"中央电视台播放，今天中人民站起来了~");
+    std::cout << ret << std::endl;
     delete p_tree;
     p_tree = nullptr;
-    std::cout << ret << std::endl;
+    
 }
 
 } // zy
