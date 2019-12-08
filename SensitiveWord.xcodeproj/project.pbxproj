@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D9DAA79C239BA94B0005445E /* SensitiveWord.h in Headers */ = {isa = PBXBuildFile; fileRef = D9DAA79A239BA94B0005445E /* SensitiveWord.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9DAA7BA239BAB010005445E /* opencc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DAA7AE239BAA5A0005445E /* opencc.framework */; };
 		D9DAA7BF239BAD7C0005445E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DAA7BE239BAD7C0005445E /* Foundation.framework */; };
 		D9DAA7CD239BAECF0005445E /* SensitiveWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9DAA7A2239BA97F0005445E /* SensitiveWord.cpp */; };
 		D9DAA7CE239BAECF0005445E /* SensitiveWord.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D9DAA7A3239BA97F0005445E /* SensitiveWord.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9DAA84F239C92050005445E /* opencc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DAA7AE239BAA5A0005445E /* opencc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9DAA84F239C92050005445E /* opencc.framework in Frameworks */,
 				D9DAA7BF239BAD7C0005445E /* Foundation.framework in Frameworks */,
-				D9DAA7BA239BAB010005445E /* opencc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +377,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = none.SensitiveWord;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -399,6 +400,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = none.SensitiveWord;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
